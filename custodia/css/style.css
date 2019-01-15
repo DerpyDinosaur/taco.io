@@ -1,0 +1,49 @@
+/*--- Main ---*/
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+	color: white;
+}
+
+body{
+	background-image: 	      linear-gradient(to right, #0F2027, #203A43, #2C5364);
+	background-image: 	 -moz-linear-gradient(to right, #0F2027, #203A43, #2C5364);
+    background-image: -webkit-linear-gradient(to right, #0F2027, #203A43, #2C5364);
+    background-image:     -ms-linear-gradient(to right, #0F2027, #203A43, #2C5364);
+}
+
+header{
+	display: flex;
+	justify-content: center;
+	margin: 1em 0;
+}
+
+h1{
+	font-size: 5em;
+	color: white;
+	text-shadow: rgba(0,0,0,0.1) 0 0 1px;
+}
+
+p{
+	font-size: 2em;
+}
+
+/*--- App ---*/
+.app{
+	width: 800px;
+	margin: auto auto;
+}
+
+.category{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.category p{
+	font-size: 1.5em;
+	margin: 0.5em;
+	padding: 0.25em 0.5em;
+	border: 0.1em solid #ffffff;
+}
