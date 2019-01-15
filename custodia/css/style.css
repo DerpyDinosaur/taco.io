@@ -39,6 +39,7 @@ p{
 	width: 800px;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 
 	position: fixed;
 	top: 1em;
@@ -46,6 +47,10 @@ p{
 	transform: translateX(-50%);
 
 	background-color: white;
+}
+
+.gunModal img{
+	padding: 1em;
 }
 
 .category{

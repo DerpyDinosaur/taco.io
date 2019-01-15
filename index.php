@@ -28,11 +28,14 @@
 	</header>
 	<div id="takoApp" class="app">
 		<div class="gunModal" v-if="showModal">
-			<img v-on:click="modalToggle" src="https://www.eftdb.one/img/Weapon/thumb/M4A1.png">
+			<!-- Assault Rifles -->
+			<img v-if="showAssault" v-on:click="toggleRifles" src="https://www.eftdb.one/img/Weapon/thumb/M4A1.png">
+			<img v-if="showAssault" v-on:click="toggleRifles" src="https://www.eftdb.one/img/Weapon/thumb/AK-74N.png">
+			<img v-if="showAssault" v-on:click="toggleRifles" src="https://www.eftdb.one/img/Weapon/thumb/AK-74M.png">
 			<!-- <img src="https://www.eftdb.one/img/Weapon/thumb/GLOCK17.png"> -->
 		</div>
 		<div class="category">
-			<p v-on:click="modalToggle">Assault Rifles</p>
+			<p v-on:click="toggleRifles">Assault Rifles</p>
 			<p>Assault Carbines</p>
 			<p>Submachine Guns</p>
 			<p>Shotguns</p>

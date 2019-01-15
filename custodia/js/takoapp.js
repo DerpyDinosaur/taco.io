@@ -6,8 +6,9 @@ var takoApp = new Vue({
 		showPistol: false
 	},
 	methods: {
-		modalToggle: function () {
-	    	this.showModal = !this.showModal
+		toggleRifles: function () {
+	    	this.showModal = !this.showModal;
+	    	this.showAssault = !this.showAssault;
 	    }
 	}
 });
