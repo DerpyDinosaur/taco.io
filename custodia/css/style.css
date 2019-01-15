@@ -35,6 +35,19 @@ p{
 	margin: auto auto;
 }
 
+.gunModal{
+	width: 800px;
+	display: flex;
+	justify-content: center;
+
+	position: fixed;
+	top: 1em;
+	left: 50%;
+	transform: translateX(-50%);
+
+	background-color: white;
+}
+
 .category{
 	display: flex;
 	justify-content: center;
@@ -46,4 +59,15 @@ p{
 	margin: 0.5em;
 	padding: 0.25em 0.5em;
 	border: 0.1em solid #ffffff;
+	-webkit-transition: all 0.2s;
+	-moz-transition: 	all 0.2s;
+	-ms-transition: 	all 0.2s;
+	-o-transition: 		all 0.2s;
+	transition: 		all 0.2s;
+}
+
+.category p:hover{
+	color: black;
+	background-color: white;
+	cursor: pointer;
 }

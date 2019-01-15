@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tako Modding</title>
+	<title>Taco.io</title>
 	<link rel="stylesheet" type="text/css" href="custodia/css/style.css">
 	<script src="custodia/js/vue.js"></script>
 	<script type="text/javascript">
@@ -24,11 +24,15 @@
 </head>
 <body>
 	<header>
-		<h1>Tako Modding</h1>
+		<h1>Taco Modding</h1>
 	</header>
 	<div id="takoApp" class="app">
+		<div class="gunModal" v-if="showModal">
+			<img v-on:click="modalToggle" src="https://www.eftdb.one/img/Weapon/thumb/M4A1.png">
+			<!-- <img src="https://www.eftdb.one/img/Weapon/thumb/GLOCK17.png"> -->
+		</div>
 		<div class="category">
-			<p>Assault Rifles</p>
+			<p v-on:click="modalToggle">Assault Rifles</p>
 			<p>Assault Carbines</p>
 			<p>Submachine Guns</p>
 			<p>Shotguns</p>
