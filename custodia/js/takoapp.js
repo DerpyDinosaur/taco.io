@@ -2,13 +2,16 @@ var takoApp = new Vue({
 	el: "#takoApp",
 	data: {
 		showModal: false,
-		showAssault: false,
-		showPistol: false
+		showAssault: false
 	},
 	methods: {
-		toggleRifles: function () {
-	    	this.showModal = !this.showModal;
-	    	this.showAssault = !this.showAssault;
+		closeModal: function(){
+	    	this.showModal = false;
+	    	this.showAssault = false;
+		},
+		assaultModal: function () {
+			this.showModal = true;
+	    	this.showAssault = true;
 	    }
 	}
 });
