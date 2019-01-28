@@ -1,10 +1,39 @@
 /*--- Main ---*/
+
+.loadingPage body{
+	opacity: 0;
+}
+
+.loadingPage{
+	height: 100%;
+    overflow-y: hidden;
+	background-image: 	      linear-gradient(to right, #0F2027, #203A43, #2C5364);
+	background-image: 	 -moz-linear-gradient(to right, #0F2027, #203A43, #2C5364);
+    background-image: -webkit-linear-gradient(to right, #0F2027, #203A43, #2C5364);
+    background-image:     -ms-linear-gradient(to right, #0F2027, #203A43, #2C5364);
+}
+
+.pageLoaded body{
+	opacity: 1;
+	overflow-y: show;
+	-webkit-transition: all 0.8s ease;
+	-moz-transition: 	all 0.8s ease;
+	-ms-transition: 	all 0.8s ease;
+	-o-transition: 		all 0.8s ease;
+	transition: 		all 0.8s ease;
+}
+
 *{
 	padding: 0;
 	margin: 0;
 	font-family: 'Ubuntu', sans-serif;
 	color: white;
-	overflow: auto;
+	-webkit-touch-callout: none;
+	  -webkit-user-select: none;
+	   -khtml-user-select: none;
+	     -moz-user-select: none;
+	      -ms-user-select: none;
+	          user-select: none;
 }
 
 body{
@@ -33,33 +62,54 @@ p{
 	font-size: 2em;
 }
 
+img{
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
+
 /*--- App ---*/
-.app{
+.blur{
+-webkit-filter: blur(20px);
+   -moz-filter: blur(15px);
+     -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+        filter: blur(15px);
+}
+
+.appWrap{
 	width: 800px;
 	margin: auto;
 }
 
-.gunModal{
+.gunModalWrap{
 	width: 100%;
 	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.97);
+	overflow-y: scroll;
+	z-index: 100;
+}
+
+.gunModal{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	flex-wrap: wrap;
 
-	position: fixed;
-	top: 0;
-	left: 0;
-
-	background-color: rgba(0,0,0,0.5);
-	border-radius: 15px;
+	padding: 5em;
 }
 
 .gunModal i{
 	font-size: 2em;
-	color: black;
-	position: absolute;
+	color: white;
+	position: fixed;
 	right: 1em;
 	top: 0.5em;
 }
@@ -72,14 +122,30 @@ p{
 	border-radius: 30px;
 }
 
-.category{
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+.gunImageWrap{
+	padding: 1em;
+	margin: 2em 0;
+	background-color: rgba(245, 245, 220,.5);
+	border-radius: 15px;
 }
 
-.category p{
+.gunImageWrap img{
+	cursor: pointer;
+}
+
+.gunImageWrap p{
+	text-align: center;
+	color: rgba(245, 245, 220,.9);
+	border: 0.1em solid rgba(245, 245, 220,.9);
+}
+
+.category{
+	display: flex;
+}
+
+.button{
 	font-size: 1.5em;
+	text-align: center;
 	margin: 0.5em;
 	padding: 0.25em 0.5em;
 	border: 0.1em solid #ffffff;
@@ -91,8 +157,31 @@ p{
 	transition: 		all 0.2s;
 }
 
-.category p:hover{
+.button:hover{
 	color: black;
 	background-color: white;
 	cursor: pointer;
+}
+
+.modWrap{
+	margin: 2em 0 0 0;
+}
+
+.modWrap img{
+	padding: 2em;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+.modWrap p{
+	text-align: center;
+}
+
+/*--- VUE ---*/
+
+.modal-enter-active, .modal-leave-active {
+  transition: opacity .3s;
+}
+.modal-enter, .modal-leave-to{
+  opacity: 0;
 }
